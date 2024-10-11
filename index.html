@@ -2,48 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Neda Alizadeh-Khameneh - Nutrition Scientist">
-  <meta name="author" content="Neda Alizadeh-Khameneh">
-  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Neda Alizadeh-Khameneh - Nutrition Scientist</title>
   <!-- Bootstrap core CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Custom styles for this template -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom styles -->
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
-    .masthead-brand {
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+    }
+    /* Updated Navbar Styles */
+    .navbar-brand {
+      font-weight: 700;
       color: #2c3e50;
-      font-weight: bold;
     }
-    .nav-link {
-      color: #2980b9 !important;
+    .navbar-nav .nav-link {
+      color: #2874A6;
     }
-    .nav-link:hover {
-      color: #2c3e50 !important;
+    .navbar-nav .nav-link:hover {
+      color: #1A5276;
     }
-    .cover-heading {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #34495e;
+    /* Hero Section Styles */
+    .cover {
+      position: relative;
+      background-image: url('./female-hero.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
     }
-    .lead {
-      color: #555;
-      font-weight: 300;
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(40, 116, 166, 0.7); /* Intermediate blue overlay */
+    }
+    .cover .container {
+      position: relative;
+      z-index: 1;
     }
     .btn-secondary {
-      background-color: #2980b9;
-      border-color: #2980b9;
+      background-color: #2874A6;
+      border-color: #2874A6;
     }
+    /* Section Styles */
     .section-heading {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-top: 1rem;
-      color: #34495e;
+      color: #2c3e50;
     }
     .section {
-      padding: 3rem 1.5rem;
+      padding: 3rem 0;
+    }
+    /* Updated Background Colors */
+    #about {
+      background-color: #eaf2f8; /* Light blue-grey */
     }
     .section:nth-child(even) {
       background-color: #f9fafb;
@@ -51,127 +72,177 @@
     .section:nth-child(odd) {
       background-color: #ffffff;
     }
+    /* Skills Badges */
+    .badge {
+      font-size: 1rem;
+      background-color: #2874A6;
+      color: #fff;
+    }
+    /* Gallery and Papers Styles */
     .gallery img, .papers img {
       width: 100%;
       border-radius: 5px;
-      max-height: 150px;
       object-fit: cover;
     }
-    .papers h5 {
+    .papers .card-title {
       font-weight: bold;
       color: #2c3e50;
-      margin-top: 0.5rem;
     }
-    .papers p {
+    .papers .card-text {
       color: #555;
+    }
+    /* Footer Styles */
+    .footer {
+      background-color: #f1f1f1;
+    }
+    .footer a {
+      color: #2874A6;
     }
   </style>
 </head>
 <body>
-  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">Neda Alizadeh-Khameneh</h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#education">Education</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#gallery">Gallery</a>
-          <a class="nav-link" href="#papers">Papers</a>
-        </nav>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Neda Alizadeh-Khameneh</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#papers">Papers</a></li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
+  </header>
 
-    <main role="main" class="inner cover">
-      <h1 class="cover-heading">Nutrition Science Expert</h1>
-      <p class="lead">Advancing research in metabolomics and public health through innovative approaches to nutrition science.</p>
-      <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Download CV</a>
-      </p>
+  <!-- Hero Section -->
+  <main role="main" class="cover text-center">
+    <div class="container">
+      <h1 class="display-4">Nutrition Science Expert</h1>
+      <p class="lead">I am a dedicated nutrition scientist with a Master's degree from Karolinska Institutet, specializing in advancing research in metabolomics and public health through innovative approaches to nutrition science. With extensive experience as a research assistant in integrative metabolomics, I utilize cutting-edge techniques like LC-MS and data analysis with SPSS & R to uncover insights into nutrition and health. My background in sports nutrition and public health equips me with a comprehensive understanding of biochemistry and nutrition assessment, enabling me to contribute significantly to the field.</p>
+      <a href="#" class="btn btn-lg btn-secondary">Download CV</a>
+    </div>
+  </main>
 
-      <section id="about" class="section">
-        <h2 class="section-heading">About</h2>
-        <p>I hold a master’s degree in nutrition science from Karolinska Institutet and have a broad range of experiences in nutrition science. My expertise spans metabolomics, sports nutrition, and public health, equipping me with a comprehensive skill set to excel in the field.</p>
-      </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">About</h2>
+      <p class="text-center">I hold a master’s degree in nutrition science from Karolinska Institutet and have a broad range of experiences in nutrition science. My expertise spans metabolomics, sports nutrition, and public health, equipping me with a comprehensive skill set to excel in the field.</p>
+    </div>
+  </section>
 
-      <section id="education" class="section">
-        <h2 class="section-heading">Education</h2>
-        <ul class="list-unstyled text-left">
-          <li><strong>Karolinska Institutet, Sweden</strong> - MSc in Nutrition Science, 2024</li>
-          <li><strong>University of Tabriz, Iran</strong> - MA in Exercise Physiology & Sports Nutrition, 2021</li>
-          <li><strong>Tabriz University of Medical Science, Iran</strong> - BSc in Nutrition Science, 2014</li>
-        </ul>
-      </section>
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Education</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Karolinska Institutet, Sweden</strong> - MSc in Nutrition Science, 2024</li>
+        <li class="list-group-item"><strong>University of Tabriz, Iran</strong> - MA in Exercise Physiology & Sports Nutrition, 2021</li>
+        <li class="list-group-item"><strong>Tabriz University of Medical Science, Iran</strong> - BSc in Nutrition Science, 2014</li>
+      </ul>
+    </div>
+  </section>
 
-      <section id="experience" class="section">
-        <h2 class="section-heading">Experience</h2>
-        <ul class="list-unstyled text-left">
-          <li><strong>Research Assistant, Integrative Metabolomics, IMM</strong> - 09/2023 – 06/2024</li>
-          <li><strong>Event/Workshop Coordinator, Tabriz University</strong> - 2017 – 2022</li>
-          <li><strong>Clinical Dietitian, Shahid Madani Cardiac Hospital</strong> - 2017 – 2019</li>
-        </ul>
-      </section>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Experience</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Research Assistant, Integrative Metabolomics, IMM</strong> - 09/2023 – 06/2024</li>
+        <li class="list-group-item"><strong>Event/Workshop Coordinator, Tabriz University</strong> - 2017 – 2022</li>
+        <li class="list-group-item"><strong>Clinical Dietitian, Shahid Madani Cardiac Hospital</strong> - 2017 – 2019</li>
+      </ul>
+    </div>
+  </section>
 
-      <section id="skills" class="section">
-        <h2 class="section-heading">Skills</h2>
-        <ul class="list-inline text-center">
-          <li class="list-inline-item">Metabolomics</li>
-          <li class="list-inline-item">Nutrition Assessment</li>
-          <li class="list-inline-item">LC-MS</li>
-          <li class="list-inline-item">SPSS & R</li>
-          <li class="list-inline-item">Biochemistry</li>
-        </ul>
-      </section>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Skills</h2>
+      <div class="text-center">
+        <span class="badge m-1">Metabolomics</span>
+        <span class="badge m-1">Nutrition Assessment</span>
+        <span class="badge m-1">LC-MS</span>
+        <span class="badge m-1">SPSS &amp; R</span>
+        <span class="badge m-1">Biochemistry</span>
+      </div>
+    </div>
+  </section>
 
-      <section id="gallery" class="section">
-        <h2 class="section-heading">Gallery</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="neda-alizadeh-khameneh.jpg" alt="Lab Work">
-          </div>
-          <div class="col-md-4">
-            <img src="neda-alizadeh-khameneh.jpg" alt="Nutrition Science">
-          </div>
-          <div class="col-md-4">
-            <img src="neda-alizadeh-khameneh.jpg" alt="Health Research">
+  <!-- Gallery Section -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Gallery</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="neda-alizadeh-khameneh.jpg" alt="Lab Work" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="neda-alizadeh-khameneh.jpg" alt="Nutrition Science" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="neda-alizadeh-khameneh.jpg" alt="Health Research" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Papers Section -->
+  <section id="papers" class="section">
+    <div class="container">
+      <h2 class="section-heading text-center">Research Papers</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/300x200/?nutrition" class="card-img-top" alt="Paper 1">
+            <div class="card-body">
+              <h5 class="card-title">Poster Title 1</h5>
+              <p class="card-text">Presented at the National Nutrition Congress, focusing on the impact of dietary habits on cardiovascular health.</p>
+            </div>
           </div>
         </div>
-      </section>
-
-      <section id="papers" class="section">
-        <h2 class="section-heading">Research Papers</h2>
-        <div class="row papers">
-          <div class="col-md-4">
-            <img src="https://source.unsplash.com/300x200/?poster" alt="Paper 1">
-            <h5>Poster Title 1</h5>
-            <p>Presented at the National Nutrition Congress, focusing on the impact of dietary habits on cardiovascular health.</p>
-          </div>
-          <div class="col-md-4">
-            <img src="https://source.unsplash.com/300x200/?science" alt="Paper 2">
-            <h5>Poster Title 2</h5>
-            <p>Research on the relationship between oxidative stress and physical performance presented at the Sports Science Conference.</p>
-          </div>
-          <div class="col-md-4">
-            <img src="https://source.unsplash.com/300x200/?health" alt="Paper 3">
-            <h5>Poster Title 3</h5>
-            <p>A study of metabolomics and aging, featured in the International Congress on Nutrition.</p>
+        <!-- Repeat similar blocks for other papers -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/300x200/?metabolomics" class="card-img-top" alt="Paper 2">
+            <div class="card-body">
+              <h5 class="card-title">Poster Title 2</h5>
+              <p class="card-text">Research on the relationship between oxidative stress and physical performance presented at the Sports Science Conference.</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p>Website for <a href="#">Neda Alizadeh-Khameneh</a>, created with Bootstrap.</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/300x200/?public-health" class="card-img-top" alt="Paper 3">
+            <div class="card-body">
+              <h5 class="card-title">Poster Title 3</h5>
+              <p class="card-text">A study of metabolomics and aging, featured in the International Congress on Nutrition.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container text-center">
+      <span class="text-muted">Website for <a href="#">Neda Alizadeh-Khameneh</a>, created with Bootstrap.</span>
+    </div>
+  </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9o+9Hg5q0I1M7n45iIOaFktj0BqFFv72UubV7" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
